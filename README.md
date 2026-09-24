@@ -8,12 +8,24 @@ Published site: https://dylanbian.github.io/meta-green-materials/
 
 Open `index.html` directly in a browser, or serve this folder with any static file server. All local asset paths are relative so the site also works from a GitHub Pages repository subdirectory.
 
+## Editing notes
+
+- `styles.css` is organized by page section (Tokens, Base, Header, Hero, About, Technologies, …, Responsive). Text colours use the `--text-2` / `--text-3` tokens, which are checked for WCAG AA contrast on every light background. Reuse them rather than adding new greys.
+- Fonts are loaded from `index.html` (DM Sans, DM Mono and Manrope via Google Fonts), not from the stylesheet.
+
 ## Before public launch
 
-- Insert a verified company email where marked in `index.html`; do not add a `mailto:` link until it is confirmed.
-- Add an approved portrait if desired; the current leadership image is a labeled graphic placeholder.
-- Technical copy was checked against the supplied CV and project materials; claims are attributed to project literature or collaboration areas where appropriate.
+- **Remove the `noindex` meta tag** in `index.html`. It keeps search engines out while the site is a draft.
+- Insert a verified company email where marked in the Contact section (a ready-made `mailto:` button is in the comment). Do not add a `mailto:` link until the address is confirmed.
+- The footer carries the UK trading disclosure (registered name, company no. 16574446, registered office) taken from Companies House. Update it if the registered office changes.
+- Add an approved portrait if desired. The current leadership image is a graphic placeholder.
+- Licensed manufacturing partners are intentionally not named on the site for now. The Collaboration section describes the licensing model generically.
+- Technical copy is based on the supplied CV and product brochures. Product claims are kept qualitative unless a brochure gives a figure.
+
+## Brand assets
+
+`assets/` holds the crest logo derived from the supplied JPG (white background removed): `crest.webp` (full crest), `crest-shield.webp` (shield only, for small sizes where the arched name is unreadable), favicons, and `og-image.jpg` (1200×630 share preview). MetaGreenMaterials® is a registered trademark of the company.
 
 No personal contact details from the CV are included. No analytics, cookies, backend or tracking are used.
 
-Original source PDFs are stored outside the static website folder so they are not served as site assets.
+Original source PDFs (`source files/`) are git-ignored so they are not served as site assets.
