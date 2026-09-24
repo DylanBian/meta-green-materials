@@ -608,208 +608,49 @@ button {
   color: var(--text-3);
 }
 
-.tech-icon {
-  width: 21px;
-  height: 19px;
-  display: flex;
+.card-icon {
+  width: 22px;
+  height: 22px;
   flex: none;
-  align-items: center;
-  justify-content: center;
-  gap: 3px;
+  color: #6f836d;
 }
 
-.road-icon i {
-  width: 2px;
-  height: 12px;
-  background: #839381;
-}
-
-.road-icon i:nth-child(2) {
-  height: 17px;
-}
-
-.road-icon i:nth-child(3) {
-  height: 8px;
-}
-
-.asphalt-icon i {
-  display: block;
-  width: 8px;
-  height: 8px;
-  border: 1px solid #7b887b;
-  border-radius: 50%;
-}
-
-.asphalt-icon i + i {
-  margin-left: -5px;
-}
-
-.mark-icon i {
-  height: 14px;
-  width: 3px;
-  border: 1px solid #75847a;
-  transform: skew(-22deg);
-}
-
-.metal-icon i {
-  width: 5px;
-  height: 11px;
-  background: #98a18d;
-  transform: skew(-20deg);
-}
-
-.metal-icon i:nth-child(2) {
-  height: 17px;
-  background: #c5aa70;
+.card-icon .accent {
+  stroke: #b89a5a;
 }
 
 .card-art {
-  height: 154px;
-  position: relative;
-  overflow: hidden;
-  background: #e2e6dc;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  background: #fff;
   border-top: 1px solid #e0e3da;
   border-bottom: 1px solid #dfe3da;
 }
 
-.card-art > span:last-child {
-  position: absolute;
-  z-index: 1;
-  left: 15px;
-  bottom: 11px;
-  font: 10px var(--mono);
-  letter-spacing: .09em;
+.card-art img {
+  display: block;
+  width: 176px;
+  height: auto;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 0;
+  margin: 0 0 14px;
+  padding: 0;
+  list-style: none;
+  font: 11px/1.6 var(--mono);
+  letter-spacing: .06em;
+  text-transform: uppercase;
   color: var(--text-3);
 }
 
-.road-art {
-  background: linear-gradient(160deg, #e1e7dc 0 45%, #aab8a4 45% 46%, #778a77 46% 58%, #485c50 58%);
-}
-
-.road-art > span.road-label {
-  color: #eff0e5;
-}
-
-.road-sun {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  width: 31px;
-  height: 31px;
-  border: 1px solid #abb394;
-  border-radius: 50%;
-}
-
-.road-line {
-  position: absolute;
-  left: 52%;
-  top: 74px;
-  width: 3px;
-  height: 51px;
-  background: #e3e5d5;
-  transform: skew(-19deg);
-}
-
-.road-surface {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 27px;
-  height: 1px;
-  background: rgba(242, 243, 231, .45);
-}
-
-.asphalt-art {
-  background: #dfe3d9;
-}
-
-.sample {
-  position: absolute;
-  left: 50%;
-  top: 48%;
-  width: 102px;
-  height: 69px;
-  border: 1px solid rgba(55, 66, 56, .23);
-  transform: translate(-50%, -50%) rotate(-28deg);
-  box-shadow: 0 8px 12px rgba(33, 43, 35, .12);
-}
-
-.sample-a {
-  background: #70776c;
-  left: 44%;
-  top: 48%;
-}
-
-.sample-b {
-  background: #b2a991;
-  left: 53%;
-  top: 40%;
-}
-
-.sample-c {
-  background: #d4cdbb;
-  left: 62%;
-  top: 32%;
-}
-
-.marking-art {
-  background: #dce3da;
-}
-
-.mark-grid {
-  position: absolute;
-  inset: -20px;
-  background: repeating-linear-gradient(90deg, transparent 0 28px, rgba(64, 87, 68, .12) 28px 29px), repeating-linear-gradient(0deg, transparent 0 28px, rgba(64, 87, 68, .12) 28px 29px);
-  transform: perspective(180px) rotateX(44deg) scale(1.35);
-}
-
-.mark-beam {
-  position: absolute;
-  left: 20%;
-  top: 50%;
-  width: 68%;
-  height: 28px;
-  background: linear-gradient(90deg, transparent, #edf0df, transparent);
-  transform: rotate(-23deg);
-  border-top: 1px solid #9ead97;
-  border-bottom: 1px solid #9ead97;
-}
-
-.metals-art {
-  background: #e4e4da;
-}
-
-.metal-orbit {
-  position: absolute;
-  width: 130px;
-  height: 60px;
-  border: 1px solid #9eaa98;
-  border-radius: 50%;
-  left: 50%;
-  top: 45%;
-  transform: translate(-50%, -50%) rotate(-28deg);
-}
-
-.orbit-b {
-  transform: translate(-50%, -50%) rotate(42deg);
-  width: 94px;
-  border-color: #b2a271;
-}
-
-.metal-core {
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  transform: translate(-50%, -50%);
-  width: 32px;
-  height: 32px;
-  border: 1px solid #8a9a87;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font: 10px var(--mono);
-  color: #647466;
-  background: #edf0e6;
+.card-tags li:not(:last-child)::after {
+  content: '\00b7';
+  padding: 0 7px;
+  color: #9aa597;
 }
 
 .card-copy {
@@ -1558,9 +1399,6 @@ button {
     max-width: 440px;
   }
 
-  .card-art {
-    height: 140px;
-  }
 
   .process-section {
     padding: 66px 20px 23px;
@@ -1682,7 +1520,11 @@ button {
   }
 
   .card-art {
-    height: 160px;
+    height: 220px;
+  }
+
+  .card-art img {
+    width: 190px;
   }
 }
 
