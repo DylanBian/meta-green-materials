@@ -76,7 +76,6 @@ button {
 .eyebrow,
 .section-kicker,
 .card-top,
-.visual-caption,
 .intro-foot,
 .technical-note,
 .process-step > span,
@@ -362,168 +361,57 @@ button {
 
 .hero-visual {
   align-self: center;
-  position: relative;
-  height: 465px;
   margin-left: 5%;
+}
+
+.hero-mosaic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.4fr 1fr;
+  gap: 10px;
+  height: 465px;
+}
+
+.hero-mosaic figure {
+  position: relative;
+  margin: 0;
   overflow: hidden;
-  background: #e6e9e0;
-  background-image: linear-gradient(rgba(76, 97, 78, .065) 1px, transparent 1px), linear-gradient(90deg, rgba(76, 97, 78, .065) 1px, transparent 1px);
-  background-size: 38px 38px;
+  background: #dfe3da;
 }
 
-.hero-visual:before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 55% 48%, transparent 10%, rgba(245, 245, 240, .58) 72%);
+.hero-mosaic .mosaic-main {
+  grid-column: 1 / -1;
 }
 
-.material-stack {
-  position: absolute;
-  width: 360px;
-  height: 260px;
-  left: 50%;
-  top: 48%;
-  transform: translate(-48%, -47%) rotate(-10deg);
-  perspective: 700px;
+.hero-mosaic img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.stack-shadow {
-  position: absolute;
-  width: 275px;
-  height: 185px;
-  left: 42px;
-  top: 60px;
-  background: rgba(24, 42, 31, .2);
-  filter: blur(20px);
-  transform: skew(-28deg, 11deg);
+.hero-mosaic .mosaic-main img {
+  object-position: center 40%;
 }
 
-.layer {
-  position: absolute;
-  left: 48px;
-  width: 265px;
-  height: 56px;
-  transform: skewY(-23deg) rotate(20deg);
-  border: 1px solid rgba(255, 255, 255, .5);
-  box-shadow: 0 9px 10px rgba(31, 47, 38, .12);
-}
-
-.layer:before {
-  content: '';
-  position: absolute;
-  left: -30px;
-  top: 15px;
-  width: 30px;
-  height: 56px;
-  transform: skewY(43deg);
-  transform-origin: right top;
-  background: rgba(37, 69, 50, .62);
-}
-
-.layer:after {
-  content: '';
+.hero-mosaic figcaption {
   position: absolute;
   left: 10px;
-  right: 8px;
-  top: 12px;
-  height: 1px;
-  background: rgba(255, 255, 255, .45);
+  bottom: 10px;
+  padding: 4px 8px;
+  background: rgba(22, 34, 29, .76);
+  color: #f1f3ec;
+  font: 11px/1.4 var(--mono);
+  letter-spacing: .06em;
+  text-transform: uppercase;
 }
 
-.layer b {
-  position: absolute;
-  right: 14px;
-  top: 19px;
-  font: 10px var(--mono);
-  letter-spacing: .14em;
-  color: rgba(30, 53, 40, .78);
-}
-
-.layer-1 {
-  top: 0;
-  background: #aabb9a;
-}
-
-.layer-2 {
-  top: 54px;
-  background: #d4d8c8;
-}
-
-.layer-3 {
-  top: 108px;
-  background: #788b72;
-}
-
-.layer-3 b {
-  color: rgba(240, 244, 232, .9);
-}
-
-.layer-4 {
-  top: 162px;
-  background: #d5cfc0;
-}
-
-.layer-4:before {
-  background: #9a968a;
-}
-
-.stack-axis {
-  position: absolute;
-  right: 15px;
-  top: 25px;
-  height: 188px;
-  border-right: 1px solid #799078;
-}
-
-.stack-axis span {
-  position: absolute;
-  right: -4px;
-  width: 7px;
-  height: 1px;
-  background: #799078;
-}
-
-.stack-axis span:nth-child(1) {
-  top: 0;
-}
-
-.stack-axis span:nth-child(2) {
-  top: 60px;
-}
-
-.stack-axis span:nth-child(3) {
-  top: 120px;
-}
-
-.stack-axis span:nth-child(4) {
-  top: 188px;
-}
-
-.visual-caption {
-  position: absolute;
-  left: 22px;
-  right: 22px;
-  bottom: 20px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  color: var(--text-3);
-  font-size: 10px;
-}
-
-.caption-mark {
-  font: 600 31px/1 var(--display);
-  letter-spacing: 0;
-  color: #445c49;
-}
-
-.visual-coordinate {
+.hero-mosaic-note {
+  margin: 10px 0 0;
   text-align: right;
-}
-
-.caption-mark span {
-  color: #a78d50;
+  font: 11px/1.4 var(--mono);
+  letter-spacing: .06em;
+  color: var(--text-3);
 }
 
 /* ---------- About ---------- */
@@ -1168,8 +1056,11 @@ button {
   }
 
   .hero-visual {
-    height: 400px;
     margin: 48px 0 0;
+  }
+
+  .hero-mosaic {
+    height: 440px;
   }
 
   .section-pad,
@@ -1300,17 +1191,12 @@ button {
   }
 
   .hero-visual {
-    height: 330px;
     margin: 39px 0 0;
   }
 
-  .material-stack {
-    transform: translate(-48%, -47%) rotate(-10deg) scale(.84);
-  }
-
-  .visual-caption {
-    left: 15px;
-    right: 15px;
+  .hero-mosaic {
+    height: 360px;
+    gap: 8px;
   }
 
   .intro-band {
@@ -1515,6 +1401,19 @@ button {
 @media (max-width: 430px) {
   .hero h1 {
     font-size: 47px;
+  }
+
+  .hero-mosaic {
+    height: 320px;
+  }
+
+  .hero-mosaic figcaption {
+    left: 8px;
+    bottom: 8px;
+  }
+
+  .cap-extra {
+    display: none;
   }
 }
 
