@@ -16,9 +16,9 @@ Open `index.html` directly in a browser, or serve this folder with any static fi
 ## Before public launch
 
 - **Remove the `noindex` meta tag** in `index.html`. It keeps search engines out while the site is a draft.
-- Insert a verified company email where marked in the Contact section (a ready-made `mailto:` button is in the comment). Do not add a `mailto:` link until the address is confirmed.
+- The Contact section shows the confirmed telephone number and the registered office address. A company email can be added where marked (a ready-made `mailto:` button is in the comment). Do not add a `mailto:` link until the address is confirmed.
 - The footer carries the UK trading disclosure (registered name, company no. 16574446, registered office) taken from Companies House. Update it if the registered office changes.
-- Add an approved portrait if desired. The current leadership image is a graphic placeholder.
+- The Leadership section uses the supplied portrait of Dr. Junwei Xie (`assets/junwei-xie.webp`).
 - Licensed manufacturing partners are intentionally not named on the site for now. The Collaboration section describes the licensing model generically.
 - Technical copy is based on the supplied CV and product brochures. Product claims are kept qualitative unless a brochure gives a figure.
 
