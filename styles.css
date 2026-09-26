@@ -929,6 +929,25 @@ button {
   margin: 0 0 22px;
 }
 
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button-outline {
+  border: 1px solid rgba(232, 237, 227, .55);
+  color: #eef2ea;
+}
+
+.button-outline:hover {
+  background: rgba(232, 237, 227, .08);
+}
+
+.button-outline span {
+  font-size: 15px;
+}
+
 .contact-aside {
   align-self: end;
   border-top: 1px solid #506156;
